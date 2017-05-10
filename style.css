@@ -1,0 +1,707 @@
+ -------------------------------
+	Theme Name: Precision Finishing Services
+	Version:    1.0
+------------------------------- */
+
+/*
+font-family: 'Cabin', sans-serif;
+*/
+
+
+/* -------------------------------
+	general styles
+------------------------------- */
+body {
+	-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+	font-family: 'Cabin', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.25;
+	color: #000;
+}
+
+body * {
+	outline: none !important;
+}
+
+.row {
+	max-width: 900px;
+}
+
+
+/* -------------------------------
+	fix footer to bottom
+------------------------------- */
+html,
+body,
+.main-wrapper {
+	height: 100%;
+}
+
+.main-wrapper {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.page-row {
+	display: table-row;
+	height: 1px;
+}
+
+.page-row-expanded {
+	height: 100%;
+}
+
+.header-inner,
+.content-wrapper-inner,
+.footer-inner {
+	width: 100%;
+	overflow: hidden;
+}
+
+
+/* -------------------------------
+	typography
+------------------------------- */
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	
+}
+
+h1, .h1 {
+	
+}
+
+h2, .h2 {
+	
+}
+
+h3, .h3 {
+	
+}
+
+h4, .h4 {
+	
+}
+
+h5, .h5 {
+	
+}
+
+h6, .h6 {
+	
+}
+
+p {
+	
+}
+
+li {
+	
+}
+
+a,
+a:focus {
+	
+}
+
+a:hover {
+	
+}
+
+
+/* -------------------------------
+	forms
+------------------------------- */
+/* placeholder Styling */
+::-webkit-input-placeholder { color: #000 !important; }
+::-moz-placeholder {          color: #000 !important; }
+::-o-placeholder {            color: #000 !important; }
+:-ms-input-placeholder {      color: #000 !important; }
+input:-moz-placeholder {      color: #000 !important; }
+
+[type=text],
+[type=password],
+[type=date],
+[type=datetime],
+[type=datetime-local],
+[type=month],
+[type=week],
+[type=email],
+[type=number],
+[type=search],
+[type=tel],
+[type=time],
+[type=url],
+[type=color],
+textarea,
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+	
+}
+
+textarea {
+	
+}
+
+[type=text]:focus,
+[type=password]:focus,
+[type=date]:focus,
+[type=datetime]:focus,
+[type=datetime-local]:focus,
+[type=month]:focus,
+[type=week]:focus,
+[type=email]:focus,
+[type=number]:focus,
+[type=search]:focus,
+[type=tel]:focus,
+[type=time]:focus,
+[type=url]:focus,
+[type=color]:focus,
+textarea:focus,
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]):focus {
+	
+}
+
+select {
+	
+}
+
+select:focus {
+	
+}
+
+select::-ms-expand {
+	
+}
+
+.gform_wrapper .hidden_label .gfield_label,
+.gform_wrapper label.hidden_sub_label, .gform_wrapper label.screen-reader-text {
+	
+}
+
+.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_first,
+.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_last,
+.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_middle {
+	padding-top: 0 !important;
+}
+
+.gform_wrapper li.hidden_label input {
+	margin-top: 16px !important;
+}
+
+body .gform_wrapper .top_label div.ginput_container {
+	
+}
+
+.gform_wrapper {
+	
+}
+
+.gform_wrapper .gform_footer {
+	padding: 0 !important;
+}
+
+.gform_wrapper h3.gform_title {
+	
+}
+
+.gform_wrapper .gform_heading {
+	
+}
+
+.gform_wrapper ul.gform_fields li.gfield {
+	
+}
+
+.gform_wrapper div.validation_error {
+	font-size: 16px !important;
+	line-height: 1.2 !important;
+	font-weight: normal !important;
+	border-top: 1px solid #790000 !important;
+	border-bottom: 1px solid #790000 !important;
+}
+
+.gform_confirmation_message {
+	padding: 16px 0;
+	text-align: center;
+	line-height: 1.2;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+.gform_wrapper li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+.gform_wrapper li.gfield_error textarea {
+	
+}
+
+.gform_wrapper .validation_message {
+	
+}
+
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container,
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield_label {
+	
+}
+
+.gform_wrapper li.gfield.gfield_error,
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+	background-color: transparent !important;
+	border: none !important;
+	margin-top: 16px !important;
+	padding-top: 0 !important;
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.gform_wrapper li.gfield.gfield_error.main-form-message {
+	
+}
+
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description {
+	padding-top: 5px !important;
+}
+
+
+/* -------------------------------
+	buttons
+------------------------------- */
+button,
+button:focus,
+.button,
+.button:focus {
+	
+}
+
+button:hover,
+.button:hover {
+	
+}
+
+
+/* gravity forms */
+.gform_wrapper .gform_footer input.button,
+.gform_wrapper .gform_footer input.button:focus,
+.gform_wrapper .gform_footer input[type=submit],
+.gform_wrapper .gform_footer input[type=submit]:focus,
+.gform_wrapper .gform_page_footer input.button,
+.gform_wrapper .gform_page_footer input.button:focus,
+.gform_wrapper .gform_page_footer input[type=submit],
+.gform_wrapper .gform_page_footer input[type=submit]:focus {
+	
+}
+
+.gform_wrapper .gform_footer input.button:hover,
+.gform_wrapper .gform_footer input[type=submit]:hover,
+.gform_wrapper .gform_page_footer input.button:hover,
+.gform_wrapper .gform_page_footer input[type=submit]:hover {
+	
+}
+
+
+/* -------------------------------
+	additional classes
+------------------------------- */
+.clearfix {
+	clear: both;
+}
+
+
+/* -------------------------------
+	slick slider
+------------------------------- */
+.slick-arrow,
+.slick-arrow:focus {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transition: all .3s;
+	-o-transition: all .3s;
+	-moz-transition: all .3s;
+	-webkit-transition: all .3s;
+	font-size: 56px;
+	cursor: pointer;
+	z-index: 2;
+	border: none;
+	padding: 0;
+	margin-bottom: 0;
+	min-width: 0;
+	background: transparent;
+	color: #9a9a9a;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+.slick-arrow:hover {
+	opacity: .7;
+	background-color: transparent;
+}
+
+.slick-prev {
+	left: -58px;
+}
+
+.slick-next {
+	right: -58px;
+}
+
+.slick-dots {
+	font-size: 0;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 17px;
+	text-align: center;
+	margin: 0;
+}
+
+.slick-dots li {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.slick-dots button,
+.slick-dots button:focus {
+	border: none;
+	padding: 0;
+	margin: 0;
+	min-width: 0;
+	display: inline-block;
+	vertical-align: top;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #710027;
+	transition: all .3s;
+	-o-transition: all .3s;
+	-moz-transition: all .3s;
+	-webkit-transition: all .3s;
+	font-size: 0;
+	margin: 0 6px;
+}
+
+.slick-dots button:hover,
+.slick-dots li.slick-active button {
+	background-color: #a6a6a6;
+}
+
+
+/* -------------------------------
+	foundation reset
+------------------------------- */
+.top-bar,
+.top-bar ul {
+	background-color: transparent;
+}
+
+
+/* -------------------------------
+	fix admin bar
+------------------------------- */
+.sticky-header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 30;
+}
+
+.admin-bar .sticky-header {
+	top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+	.admin-bar .sticky-header {
+		top: 46px;
+	}
+}
+
+
+/* -------------------------------
+	header
+------------------------------- */
+
+
+/* -------------------------------
+	footer
+------------------------------- */
+
+
+/* -------------------------------
+	media
+------------------------------- */
+@media only screen and (min-width: 1024px) {
+
+	/* -------------------------------
+		header
+	------------------------------- */
+	
+
+}/*min-width: 1024px*/
+
+
+@media only screen and (max-width: 1023px) {
+
+	/* -------------------------------
+		header
+	------------------------------- */
+	
+
+}/*max-width: 1023px*/
+
+
+@media only screen and (max-width: 1023px) and (min-width: 640px) {
+
+	/* -------------------------------
+		header
+	------------------------------- */
+	
+
+}/*max-width: 1023px and min-width: 640px*/
+
+
+@media only screen and (min-width: 640px) {
+
+	/* -------------------------------
+		top bar
+	------------------------------- */
+	.top-bar {
+		height: 110px;
+	}
+
+
+	/* top bar title */
+	.top-bar-title {
+		padding: 0;
+	}
+
+	.top-bar-title > span {
+		display: none;
+	}
+
+
+	/* top bar menu */
+	.top-bar #responsive-menu {
+		height: 100%;
+		padding-left: 44%;
+		text-align: center;
+	}
+
+	.top-bar .top-bar-right {
+		display: inline-block;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		margin-top: -4px;
+		z-index: 5;
+		float: none;
+	}
+
+
+	/* 1st level */
+	.top-bar .menu.dropdown > li {
+		margin: 0 5px;
+	}
+
+	.top-bar .menu.dropdown > li > a {
+		display: inline-block;
+		font-size: 17px;
+		text-transform: uppercase;
+		color: #fff;
+		line-height: 1;
+		font-weight: 400;
+		padding: 11px 13px;
+		text-decoration: none;
+	}
+
+	.top-bar .menu.dropdown > li.current_page_ancestor > a,
+	.top-bar .menu.dropdown > li.current_page_item > a,
+	.top-bar .menu.dropdown > li.is-active > a,
+	.top-bar .menu.dropdown > li:hover > a {
+		background-color: #000;
+	}
+
+
+	/* dropdown arrow */
+	.dropdown.menu > li.is-dropdown-submenu-parent > a:after {
+		display: none !important;
+	}
+
+
+	/* submenu */
+	.is-dropdown-submenu {
+		background-color: #000 !important;
+		border: none !important;
+		white-space: nowrap;
+	}
+
+	.is-dropdown-submenu > li {
+		display: block;
+	}
+
+	.is-dropdown-submenu > li > a {
+		font-size: 13px;
+		line-height: 1;
+		font-weight: 500;
+		text-decoration: none;
+		color: #fff;
+		padding: 9px 13px 8px;
+		text-align: left;
+		text-transform: none;
+	}
+
+	.is-dropdown-submenu > li.current_page_parent > a,
+	.is-dropdown-submenu > li.current_page_item > a,
+	.is-dropdown-submenu > li.is-active > a,
+	.is-dropdown-submenu > li:hover > a {
+		background-color: #2a2a2a;
+	}
+
+}/*min-width: 640px*/
+
+
+@media only screen and (max-width: 639px) {
+
+	/* -------------------------------
+		typography
+	------------------------------- */
+	h1, .h1,
+	h2, .h2,
+	h3, .h3,
+	h4, .h4,
+	h5, .h5,
+	h6, .h6 {
+		
+	}
+
+	h1, .h1 {
+		
+	}
+
+	h2, .h2 {
+		
+	}
+
+	h3, .h3 {
+		
+	}
+
+	h4, .h4 {
+		
+	}
+
+	h5, .h5 {
+		
+	}
+
+	h6, .h6 {
+		
+	}
+
+
+	/* -------------------------------
+		top bar
+	------------------------------- */
+	/* top bar title */
+	.top-bar-title {
+		background-color: #fff;
+		width: 100%;
+		padding: 0;
+		text-align: center;
+	}
+
+	.top-bar-title > span {
+		display: block !important;
+		background-color: #000;
+		text-align: right;
+		padding: 10px 15px;
+	}
+
+	.top-bar-title .menu-icon {
+		width: 30px;
+		height: 26px;
+		top: 4px;
+		bottom: auto;
+		margin-bottom: 0;
+		background-color: transparent;
+		border: none;
+	}
+
+
+	/* top bar menu */
+	#responsive-menu {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 30;
+		width: 100%;
+	}
+
+	.top-bar ul {
+		background-color: #000;
+	}
+
+	.top-bar .is-drilldown {
+		border-top: 1px solid #fff;
+	}
+
+	.top-bar .menu > li > a {
+		display: block;
+		font-size: 16px;
+		text-transform: uppercase;
+		color: #fff;
+		line-height: 1;
+		font-weight: 700;
+		padding: 11px 13px;
+		text-decoration: none;
+	}
+
+	.top-bar .menu li.current_page_ancestor > a,
+	.top-bar .menu li.current-menu-parent > a,
+	.top-bar .menu li.current_page_item > a,
+	.top-bar .menu > li:hover > a {
+		background-color: #2a2a2a;
+	}
+
+
+	/* drilldown */
+	.is-drilldown-submenu-parent > a:after {
+		border-color: transparent transparent transparent #fff;
+	}
+
+	.js-drilldown-back a {
+		background-color: #2a2a2a;
+	}
+
+	.js-drilldown-back > a:before {
+		border-color: transparent #fff transparent transparent;
+		position: relative;
+		top: -2px;
+	}
+
+	.top-bar .is-submenu-parent-item a {
+		border-top: 1px solid #fff;
+		border-bottom: 1px solid #fff;
+	}
+
+
+	/* -------------------------------
+		header
+	------------------------------- */
+	
+
+}/*max-width: 639px
