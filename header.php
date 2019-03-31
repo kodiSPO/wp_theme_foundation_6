@@ -6,10 +6,6 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title><?php the_title(); ?></title>
-
-	<link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,700" rel="stylesheet">
-
 	<?php wp_head(); ?>
 </head>
 
@@ -18,42 +14,35 @@
 	<!-- main-wrapper -->
 	<div class="main-wrapper">
 
-		<!-- header -->
-		<div class="header page-row"><!-- sticky-header -->
-			<div class="header-inner">
-				<div class="row">
-					<div class="columns">
+		<div class="header <?php echo (get_field('header_style') == 'transparent') ? 'transparent-style' : ''; ?>">
+			<div class="header-inner row external-row align-middle">
+				<div class="columns title-bar shrink">
+					<div class="title-bar-title">
+						<?php echo (is_front_page()) ? '' : '<a href="' . get_site_url() . '">'; ?>
+							<img src="<?php the_field('opt_primary_logo', 'option'); ?>" alt="<?php echo bloginfo('name'); ?>" height="50" class="site-logo">
+						<?php echo (is_front_page()) ? '' : '</a>'; ?>
+					</div>
 
-						<div class="top-bar">
-							<div class="top-bar-title">
-								<?php the_custom_logo(); ?>
-								<span data-responsive-toggle="responsive-menu" data-hide-for="medium">
-									<button class="menu-icon light" type="button" data-toggle></button>
-								</span>
-							</div>
-							<div id="responsive-menu">
-								<div class="top-bar-right">
-									<?php
-									wp_nav_menu(array(
-										'container'      => false,
-										'menu'           => __( 'Top Bar Menu', 'textdomain' ),
-										'menu_class'     => 'menu',
-										'theme_location' => 'main-nav',
-										'items_wrap'     => '<ul id="%1$s" class="%2$s" data-responsive-menu="drilldown medium-dropdown" data-parent-link="true">%3$s</ul>',
-										'walker'         => new Foundation_6_Walker(),
-										// 'fallback_cb' => 'f6_topbar_menu_fallback'
-									));
-									?>
-								</div>
-							</div>
-						</div>
-
+					<div data-responsive-toggle="responsive-menu" data-hide-for="large" class="menu-toggle">
+						<button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
 					</div>
 				</div>
+
+				<div class="columns top-bar" id="responsive-menu">
+					<?php
+					wp_nav_menu(array(
+						'container'      => false,
+						'menu'           => __( 'Top Bar Menu', 'textdomain' ),
+						'menu_class'     => 'menu',
+						'theme_location' => 'main-nav',
+						'items_wrap'     => '<ul id="%1$s" class="vertical large-horizontal menu" data-responsive-menu="drilldown large-dropdown" data-parent-link="true">%3$s</ul>',
+						'walker'         => new Foundation_6_Walker(),
+					));
+					?>
+				</div>
+
 			</div>
-		</div><!-- /header -->
 
+		</div>
 
-		<!-- content wrapper -->
-		<div class="content-wrapper page-row page-row-expanded">
-			<div class="content-wrapper-inner">
+		<!-- <div class="header-placeholder"></div> -->

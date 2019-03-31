@@ -1,0 +1,257 @@
+/*
+font-family: 'Montserrat', sans-serif;
+regular: 400
+medium: 500
+semi-bold: 600
+bold: 700
+black: 900
+*/
+
+
+
+
+
+@font-face {
+	font-family: 'ProbaPro';
+	src: url('/wp-content/themes/provectus/fonts/ProbaPro-Regular.otf') format("opentype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* -------------------------------
+	general styles
+------------------------------- */
+body {
+	-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+	font-family: 'ProbaPro', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.625;
+	color: #000;
+}
+
+body * {
+	outline: none !important;
+}
+
+.row {
+	max-width: 1210px;
+}
+
+/* -------------------------------
+	typography
+------------------------------- */
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	
+}
+
+h1, .h1 {
+	
+}
+
+h2, .h2 {
+	
+}
+
+img {
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 100%;
+}
+
+img.lazy-loaded {
+	height: auto;
+}
+
+strong {
+	font-weight: 500;
+}
+
+
+/* -------------------------------
+	additional classes
+------------------------------- */
+
+
+
+
+
+
+
+/* -------------------------------
+	buttons
+------------------------------- */
+button,
+.button {
+	
+}
+
+
+/* -------------------------------
+	forms
+------------------------------- */
+.gform_fields {
+	margin: 0;
+	padding: 0;
+}
+
+.gfield {
+	list-style: none;
+	margin-bottom: 30px;
+}
+
+.gfield.hidden_label > label {
+	display: none;
+}
+
+::-webkit-input-placeholder { color: #bcbcbc !important; }
+::-moz-placeholder {          color: #bcbcbc !important; }
+::-o-placeholder {            color: #bcbcbc !important; }
+:-ms-input-placeholder {      color: #bcbcbc !important; }
+input:-moz-placeholder {      color: #bcbcbc !important; }
+
+[type=text],
+[type=password],
+[type=date],
+[type=datetime],
+[type=datetime-local],
+[type=month],
+[type=week],
+[type=email],
+[type=number],
+[type=search],
+[type=tel],
+[type=time],
+[type=url],
+[type=color],
+textarea {
+	width: 100%;
+	height: 54px;
+	border-radius: 3px;
+	border: 1px solid #cacaca;
+	background-color: #ffffff;
+	color: #000;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: normal;
+	padding: 0 20px;
+}
+
+textarea {
+	height: 223px;
+	padding: 10px 20px;
+	resize: none;
+	vertical-align: top;
+}
+
+.gform_footer {
+	position: relative;
+}
+
+.gform_footer .gform_ajax_spinner {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+.gform_footer [type="submit"] {
+	width: 180px;
+	display: block;
+	margin: 0 auto;
+	color: #000000;
+}
+
+.validation_error {
+	font-size: 14px;
+	line-height: 1.2;
+	color: #ff0000;
+	margin-bottom: 15px;
+}
+
+.gfield_description.validation_message {
+	font-size: 14px;
+	line-height: 1.2;
+	color: #ff0000;
+	margin-top: 3px;
+}
+
+.gform_confirmation_message {
+	font-weight: 400;
+	color: green;
+	font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------
+	media
+------------------------------- */
+@media only screen and (min-width: 1024px) {
+
+
+}/*min-width: 1024px*/
+
+
+@media only screen and (max-width: 1023px) {
+
+
+}/*max-width: 1023px*/
+
+
+@media only screen and (max-width: 1023px) and (min-width: 640px) {
+
+
+}/*max-width: 1023px and min-width: 640px*/
+
+
+@media only screen and (min-width: 640px) {
+
+
+}/*min-width: 640px*/
+
+
+@media only screen and (max-width: 639px) {
+
+
+}/*max-width: 639px*/

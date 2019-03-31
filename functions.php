@@ -1,35 +1,52 @@
 <?php
+// Disable use XML-RPC
+add_filter( 'xmlrpc_enabled', '__return_false' );
+
+
 // theme support
-add_theme_support('custom-logo');
+// add_theme_support('custom-logo');
 add_theme_support('post-thumbnails');
 
 
+/*
+** custom image sizes
+*/
+// add_image_size('case-preview-865-450', 865, 450, true);
+// add_image_size('post-preview-387-220', 387, 220, true);
+
+
 // allow .svg through wp media uploader
-// function cc_mime_types($mimes) {
-// 	$mimes['svg'] = 'image/svg+xml';
-// 	return $mimes;
-// }
-// add_filter('upload_mimes', 'cc_mime_types');
+function cc_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
 
 
 // enqueue scripts and styles
 function theme_styles_scripts() {
 	if (!is_admin()) {
 
-		$theme_uri = get_template_directory_uri();
+		$theme_uri = get_stylesheet_directory_uri();
+		$version   = '1.0.0';
 
-		// load stylesheets
-		wp_enqueue_style('foundation',   $theme_uri .'/css/foundation.min.css',   array(), null);
-		wp_enqueue_style('slick-css',    $theme_uri .'/css/slick.css',            array(), null);
-		wp_enqueue_style('font-awesome', $theme_uri .'/css/font-awesome.min.css', array(), null);
-		wp_enqueue_style('style',        $theme_uri .'/style.css',                array(), null);
+		wp_deregister_script('wp-embed');
+		remove_action('wp_head', 'print_emoji_detection_script', 7);
+		remove_action('wp_print_styles', 'print_emoji_styles');
+		wp_deregister_script('jquery');
 
-		// load javaScripts
-		wp_enqueue_script('jquery');
-		wp_enqueue_script('foundation',  $theme_uri . '/js/foundation.min.js',         array(), null, true);
-		wp_enqueue_script('slick-js',    $theme_uri . '/js/slick.min.js',              array(), null, true);
-		wp_enqueue_script('matchHeight', $theme_uri . '/js/jquery.matchHeight-min.js', array(), null, true);
-		wp_enqueue_script('global',      $theme_uri . '/js/global.js',                 array(), null, true);
+
+		/*
+		** load css
+		*/
+		wp_enqueue_style('theme-css', $theme_uri .'/css/theme.css', array(), $version);
+
+		/*
+		** load js
+		*/
+		wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(), null);
+
+		wp_enqueue_script('theme-js', $theme_uri . '/js/theme.js', array('jquery'), $version, true);
 
 	}
 }
@@ -67,7 +84,7 @@ function f6_topbar_menu_fallback($args) {
 // register navigation menu
 register_nav_menus(array(
 	'main-nav'   => 'Main navigation',
-	'footer-nav' => 'Footer navigation'
+	'footer-nav' => 'Footer navigation',
 ));
 
 
@@ -79,6 +96,12 @@ if (function_exists('acf_add_options_page')) {
 
 // GF: add support to hide field labels
 add_filter('gform_enable_field_label_visibility_settings', '__return_true');
+
+
+/*
+** Grvity forms: Disable Automatic Scrolling On All Forms
+*/
+add_filter( 'gform_confirmation_anchor', '__return_false' );
 
 
 // customize login screen
@@ -95,12 +118,41 @@ function wordpress_login_styling() {
 		}
 	</style>
 <?php }
-add_action( 'login_enqueue_scripts', 'wordpress_login_styling' );
+// add_action( 'login_enqueue_scripts', 'wordpress_login_styling' );
 
 
 // Removing menu pages
 function remove_menus(){
-	// remove_menu_page( 'edit.php' );          //Posts
-	// remove_menu_page( 'edit-comments.php' ); //Comments
+	remove_menu_page( 'edit.php' );          //Posts
+	remove_menu_page( 'edit-comments.php' ); //Comments
 }
 // add_action( 'admin_menu', 'remove_menus' );
+
+
+
+
+/*
+** ajax handler - ajax sample
+*/
+if ( !function_exists('load_instagram_posts') ):
+
+	function load_instagram_posts() {
+
+		$event_id = intval(sanitize_text_field($_POST['id']));
+		ob_start(); ?>
+
+			<!-- html -->
+
+		<?php $content = ob_get_contents();
+		ob_end_clean();
+		echo $content;
+
+		// echo json_encode($insta_posts);
+		wp_die();
+
+	}
+
+	// add_action('wp_ajax_load_instagram_posts',        'load_instagram_posts');
+	// add_action('wp_ajax_nopriv_load_instagram_posts', 'load_instagram_posts');
+
+endif;
