@@ -42,7 +42,7 @@ function theme_styles_scripts() {
 		// wp_enqueue_style('font-opensans-css', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 		wp_enqueue_style('foundaion-css', $theme_uri .'/css/plugins/foundation.css', array(), $version);
 		wp_enqueue_style('slick-css', $theme_uri .'/css/plugins/slick.css', array(), $version);
-		wp_enqueue_style('theme-css', $theme_uri .'/css/theme.css', array(), $version)
+		wp_enqueue_style('theme-css', $theme_uri .'/css/theme.css', array(), $version);
 
 		/*
 		** load js
