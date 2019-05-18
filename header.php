@@ -14,12 +14,12 @@
 	<!-- main-wrapper -->
 	<div class="main-wrapper">
 
-		<div class="header <?php echo (get_field('header_style') == 'transparent') ? 'transparent-style' : ''; ?>">
-			<div class="header-inner row external-row align-middle">
+		<div class="header">
+			<div class="row align-middle">
 				<div class="columns title-bar shrink">
 					<div class="title-bar-title">
 						<?php echo (is_front_page()) ? '' : '<a href="' . get_site_url() . '">'; ?>
-							<img src="<?php the_field('opt_primary_logo', 'option'); ?>" alt="<?php echo bloginfo('name'); ?>" height="50" class="site-logo">
+							<img src="<?php //the_field('opt_primary_logo', 'option'); ?>" alt="<?php echo bloginfo('name'); ?>" height="50" class="site-logo">
 						<?php echo (is_front_page()) ? '' : '</a>'; ?>
 					</div>
 
