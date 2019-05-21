@@ -97,24 +97,34 @@ button,
 	forms
 ------------------------------- */
 .gform_fields {
-	margin: 0;
 	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .gfield {
-	list-style: none;
+	width: 100%;
 	margin-bottom: 30px;
 }
 
-.gfield.hidden_label > label {
+.gfield.gform_hidden {
 	display: none;
 }
 
-::-webkit-input-placeholder { color: #bcbcbc !important; }
-::-moz-placeholder {          color: #bcbcbc !important; }
-::-o-placeholder {            color: #bcbcbc !important; }
-:-ms-input-placeholder {      color: #bcbcbc !important; }
-input:-moz-placeholder {      color: #bcbcbc !important; }
+.gfield.hidden_label .gfield_label {
+	display: none;
+}
+
+.gfield.gform_validation_container {
+	display: none;
+}
+
+.gfield_label {
+	color: #9a9a9a;
+	padding-bottom: 2px;
+}
 
 [type=text],
 [type=password],
@@ -131,23 +141,28 @@ input:-moz-placeholder {      color: #bcbcbc !important; }
 [type=url],
 [type=color],
 textarea {
-	width: 100%;
-	height: 54px;
-	border-radius: 3px;
-	border: 1px solid #cacaca;
-	background-color: #ffffff;
 	color: #000;
-	font-size: 20px;
-	font-weight: 300;
 	line-height: normal;
-	padding: 0 20px;
+	height: 30px;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #000;
+	@include transition;
+
+	&:focus {
+		border-color: #eb4a35;
+	}
 }
 
-textarea {
-	height: 223px;
-	padding: 10px 20px;
-	resize: none;
-	vertical-align: top;
+.validation_error,
+.validation_message {
+	font-size: 13px;
+	color: #eb4a35;
+}
+
+.gform_confirmation_message {
+	font-size: 20px;
+	font-weight: 500;
 }
 
 .gform_footer {
@@ -159,33 +174,6 @@ textarea {
 	top: 50%;
 	right: 0;
 	transform: translateY(-50%);
-}
-
-.gform_footer [type="submit"] {
-	width: 180px;
-	display: block;
-	margin: 0 auto;
-	color: #000000;
-}
-
-.validation_error {
-	font-size: 14px;
-	line-height: 1.2;
-	color: #ff0000;
-	margin-bottom: 15px;
-}
-
-.gfield_description.validation_message {
-	font-size: 14px;
-	line-height: 1.2;
-	color: #ff0000;
-	margin-top: 3px;
-}
-
-.gform_confirmation_message {
-	font-weight: 400;
-	color: green;
-	font-size: 18px;
 }
 
 
